@@ -42,7 +42,7 @@ export function Header() {
           backgroundSize: '1200px 600px',
         }}
       >
-        <header className="relative px-4 py-24 sm:px-6 md:grid md:min-h-screen md:place-items-center lg:px-8">
+        <header className="relative px-4 py-24 sm:px-6 md:grid md:min-h-[75vh] md:place-items-center lg:px-8">
           <div className="absolute right-4 top-5 space-x-4 text-gray-300 dark:text-gray-600">
             {!isMounted
               ? null
@@ -76,8 +76,7 @@ export function Header() {
                   data-test-id="website-slogan"
                   className="py-3 pl-8 text-2xl font-normal text-gray-800 dark:text-gray-200"
                 >
-                  Everything you need to know about monorepos, and the tools to
-                  build them.
+                  Everything you need to know about monorepos, and the tools to make them painless.
                 </h1>
                 <p className="text-right text-xs italic text-gray-500">
                   - Made with love by{' '}

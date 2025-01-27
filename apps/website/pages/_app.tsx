@@ -22,18 +22,18 @@ function CustomApp({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo
         title="Monorepo Explained"
-        description="Everything you need to know about monorepos, and the tools to build them."
+        description="Everything you need to know about monorepos, and the tools to make them painless."
         openGraph={{
           url: 'https://monorepo.tools' + router.asPath,
           title: 'Monorepo Explained',
           description:
-            'Everything you need to know about monorepos, and the tools to build them.',
+            'Everything you need to know about monorepos, and the tools to make them painless.',
           images: [
             {
               url: 'https://monorepo.tools/images/og-monorepotools.jpg',
               width: 1200,
               height: 630,
-              alt: 'Everything you need to know about monorepos, and the tools to build them.',
+              alt: 'Everything you need to know about monorepos, and the tools to make them painless.',
               type: 'image/jpg',
             },
           ],

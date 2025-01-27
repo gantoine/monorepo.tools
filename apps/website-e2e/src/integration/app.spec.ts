@@ -5,7 +5,7 @@ describe('website', () => {
 
   it('should display welcome message', () => {
     Page.getWebsiteSlogan().contains(
-      'Everything you need to know about monorepos, and the tools to build them'
+      'Everything you need to know about monorepos, and the tools to make them painless'
     );
   });
 

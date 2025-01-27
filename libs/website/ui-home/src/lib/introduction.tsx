@@ -4,10 +4,10 @@ export function Introduction(): JSX.Element {
   return (
     <div
       data-test-id="understanding-monorepos"
-      className="mt-32 bg-slate-50 dark:bg-slate-800"
+      className="bg-slate-50 dark:bg-slate-800"
     >
       {/* Header */}
-      <article className="relative bg-slate-50 pb-32 dark:bg-slate-800 md:pt-64">
+      <article className="relative bg-slate-50 pb-32 dark:bg-slate-800">
         <div className="absolute inset-0">
           <img
             aria-hidden="true"
@@ -67,94 +67,9 @@ export function Introduction(): JSX.Element {
                   we welcome pull requests if we got something wrong!
                 </a>
               </p>
-              <p className="mt-6 max-w-3xl text-xl text-gray-700 dark:text-gray-300">
-                The tools we'll focus on are:&nbsp;
-                <a
-                  href="https://bazel.build/?utm_source=monorepo.tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Bazel (by Google)
-                </a>
-                , &nbsp;
-                <a
-                  href="https://gradle.org/?utm_source=monorepo.tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Gradle Build Tool (by Gradle, Inc)
-                </a>
-                , &nbsp;
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://microsoft.github.io/lage/?utm_source=monorepo.tools"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Lage (by Microsoft)
-                </a>
-                , &nbsp;
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://lerna.js.org/?utm_source=monorepo.tools"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Lerna
-                </a>
-                ,&nbsp;
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://moonrepo.dev/moon/?utm_source=monorepo.tools"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  moon (by moonrepo)
-                </a>
-                ,&nbsp;
-                <a
-                  href="https://nx.dev/?utm_source=monorepo.tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Nx
-                </a>
-                ,&nbsp;
-                <a
-                  href="https://pantsbuild.org/?utm_source=monorepo.tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Pants (by the Pants Build community)
-                </a>
-                ,&nbsp;
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://rushstack.io/?utm_source=monorepo.tools"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Rush (by Microsoft)
-                </a>
-                , and&nbsp;
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://turborepo.org/?utm_source=monorepo.tools"
-                  className="border-b border-yellow-500 transition hover:rounded hover:bg-yellow-500 hover:text-gray-800"
-                >
-                  Turborepo (by Vercel)
-                </a>
-                . We chose these tools because of their usage or recognition in
-                the Web development community.
-              </p>
             </div>
             <svg
-              className="mx-auto mt-16 h-auto w-2/3 text-slate-800 antialiased dark:text-white"
+              className="mx-auto h-auto w-2/3 text-slate-800 antialiased dark:text-white"
               viewBox="0 0 340 340"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"

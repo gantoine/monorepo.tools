@@ -29,7 +29,7 @@ export function Index() {
               url: 'https://monorepo.tools/images/conf/og-monorepo-world-24.jpg',
               width: 1200,
               height: 630,
-              alt: 'Everything you need to know about monorepos, and the tools to build them.',
+              alt: 'Everything you need to know about monorepos, and the tools to make them painless.',
               type: 'image/jpg',
             },
           ],
@@ -45,17 +45,11 @@ export function Index() {
 
       <main>
         <Intro />
-
         <Tickets />
-
         <Location />
-
         <Speakers />
-
         <GetInvolved />
-
         <Sponsors />
-
         <CodeOfConduct />
       </main>
     </div>
