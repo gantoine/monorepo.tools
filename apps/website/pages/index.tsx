@@ -3,11 +3,8 @@ import {
   Conclusion,
   Introduction,
   MonolithCallout,
-  MonorepoFeatures,
-  MonorepoFeaturesOverview,
   Resources,
   ToolsReview,
-  ToolsSupportCallout,
   WhatIsAMonorepo,
   WhyAMonorepo,
 } from '@monorepo-tools/website/ui-home';
@@ -54,12 +51,6 @@ export function Index() {
         <MonolithCallout />
 
         <WhyAMonorepo />
-
-        <MonorepoFeaturesOverview />
-
-        <ToolsSupportCallout />
-
-        <MonorepoFeatures />
 
         <Conclusion />
 
