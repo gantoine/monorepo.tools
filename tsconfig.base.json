@@ -25,7 +25,10 @@
       "@monorepo-tools/website/ui-home": ["libs/website/ui-home/src/index.ts"],
       "@monorepo-tools/website/ui-typescript": [
         "libs/website/ui-typescript/src/index.ts"
-      ]
+      ],
+      "@monorepo-tools/website/ui-code-analysis": [
+        "libs/website/ui-code-analysis/src/index.ts"
+      ],
     }
   },
   "exclude": ["node_modules", "tmp"]
