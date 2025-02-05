@@ -427,21 +427,21 @@ export function CodeAnalysisTools(): JSX.Element {
           </dl>
         </div>
 
-        {/*Dependency Graph Visualization*/}
+        {/*Browse new and existing issues*/}
         <div
-          id="dependency-graph-visualization"
+          id="browse-new-and-existing-issues"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <PresentationChartLineIcon className="h-6 w-6" />
+              <ExclamationTriangleIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Dependency graph visualization
+              Browse new and existing issues
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#dependency-graph-visualization"
+                href="#browse-new-and-existing-issues"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -449,9 +449,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Visualize dependency relationships between projects and/or tasks.
-              The visualization is interactive meaning you are able to search,
-              filter, hide, focus/highlight & query the nodes in the graph.
+              Browse issues found in your repo and surface urgent problems and vulnerabilities.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -473,116 +471,85 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
+                  <Supported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel's implementation supports a custom query language to
-                filter out node you are not interested in.
+                Codacy Quality supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Gradle Build Tool
+                  <ManualImplementation /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Scan provides rich dependency information, and
-                third party tools are available for project/task graphs.
+                Gradle Build supports it via a Graphana integration.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Lage
+                  <NotSupported /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage doesn't come with a visualizer but it's possible to write
-                your own.
+                Precommit doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lerna doesn't come with a visualizer but it's possible to write
-                your own.
+                Qodana supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon comes with an interactive but non-filterable visualizer.
-                Supports both dependency and project graphs.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
+                  <NotSupported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Nx comes with an interactive visualizer that allows you to
-                filter and explore large workspaces.
+                Superlinter doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants doesn't come with a visualizer, but it can emit a JSON
-                file containing the fine-grained graph structure of your
-                codebase, which can be processed into input for visualization
-                tools.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush doesn't come with a visualizer but it's possible to write
-                your own.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Turborepo uses Graphviz to generate static image and HTML file
-                of the execution plan. The implementation is not interactive.
+                Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*MANAGEMENT*/}
+        {/*MANAGRABLE*/}
         <div className="font-boldtext-gray-800 dark:text-gray-100tracking-tight mt-24 flex items-center text-2xl leading-loose sm:text-3xl sm:leading-relaxed lg:mt-32">
           Manageable
           <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
         </div>
 
-        {/*Code Sharing*/}
+        {/*Multi-language quality and security tools*/}
         <div
-          id="source-code-sharing"
+          id="multi-language-quality-and-security-tools"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
@@ -590,11 +557,11 @@ export function CodeAnalysisTools(): JSX.Element {
               <CodeBracketIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Source code sharing
+              Multi-language quality and security tools
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#source-code-sharing"
+                href="#multi-language-quality-and-security-tools"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -602,7 +569,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Facilitates sharing of discrete pieces of source code.
+              Supports linting, formatting, and security tools for most popular languages and frameworks.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -619,133 +586,91 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Bazel
+                  <Supported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel supports it. Any folder of files can be marked as a
-                project and can be shared. Bazel build rules are used to enable
-                sharing without hurting dev ergonomics.
+                Codacy Quality supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Gradle Build Tool
+                  <Supported /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Tool can publish shareable artifacts and consume
-                dependencies from multiple repositories.
+                Megalinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Lage
+                  <Supported /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage supports it. Only npm packages can be shared.
+                Precommit supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lerna supports it. Only npm packages can be shared.
+                Qodana supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon supports it. Only packages from supported languages can be
-                shared.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Nx
+                  <Supported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Nx supports it. Any folder of files can be marked as a project
-                and can be shared. Nx plugins help configure WebPack, Rollup,
-                TypeScript and other tools to enable sharing without hurting dev
-                ergonomics.
+                Superlinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants supports packaging, publishing and consuming code
-                artifacts across repos, using the standard idioms of the
-                underlying languages and frameworks.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush supports it, however discourages importing code from
-                folders that are not a declared npm dependency. This ensures
-                that projects can be easily moved between monorepos. For
-                situations where creating a package is too much overhead,
-                "packlets" offer a lightweight alternative.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Turborepo supports it. Only npm packages can be shared.
+                Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Consistent Tooling*/}
+        {/*Tooling install and management*/}
         <div
-          id="consistent-tooling"
+          id="tooling-install-and-management"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CommandLineIcon className="h-6 w-6" />
+              <CogIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Consistent tooling
+              Tooling install and management
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#consistent-tooling"
+                href="#tooling-install-and-management"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -753,19 +678,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The tool helps you get a consistent experience regardless of what
-              you use to develop your projects: different JavaScript frameworks,
-              Go, Rust, Java, etc. <br />
-              In other words, the tool treats different technologies the same
-              way.
-            </p>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              For instance, the tool can analyze package.json and JS/TS files to
-              figure out JS project deps, and how to build and test them. But it
-              will analyze Cargo.toml files to do the same for Rust, or Gradle
-              files to do the same for Java. This requires the tool to be
-              pluggable.
+              Manage tool installs, versioning, and required dependencies or language runtimes. For example, sds/scss-lint requires ruby, linter tools should manage both scss-lint and ruby runtime.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -782,113 +695,71 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Bazel
+                  <ManualImplementation /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Bazel's build rules act like plugins for different technologies
-                and frameworks.
+                Codacy Quality supports it, but the version cannot be specified.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
+                  <ManualImplementation /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Gradle Build Tool is extensible through an ecosystem of plugins
-                allowing it to, for instance, build native with CMake or package
-                with webpack.
+                Megalinter supports it, but the version cannot be specified.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported />
-                  Lage
+                  <ManualImplementation /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lage can only run npm scripts.
+                Precommit is not hermetic, and you might run into runtime incompatibility issues.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported />
-                  Lerna
+                  <ManualImplementation /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna can only run npm scripts.
+                Qodana supports it as containerized tools.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon can run any binary/command that exists on the current
-                machine. With its integrated toolchain, can also download and
-                install necessary tools behind the scene.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Nx is pluggable. It is able to invoke npm scripts by default,
-                but can be extended to invoke other tools (e.g., Gradle).
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Pants
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants has a robust Plugin API that provides a uniform UX across
-                languages and frameworks. It provides multiple plugins out of
-                the box, including for Python, Java, Scala, Go, Shell and
-                Docker, with more on the way. You can also write your own custom
-                build rules using the same API.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported />
-                  Rush
+                  <ManualImplementation /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Rush only builds TypeScript/JavaScript projects, recommending a
-                decoupled approach where native components are built separately
-                using native toolchains or BuildXL. Ideally Node.js is the only
-                required prerequisite for monorepo developers.
+                Sonarqube supports it, but the version cannot be specified.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported />
-                  Turborepo
+                  <ManualImplementation /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Turborepo can only run npm scripts, but nodejs doesn’t have to
-                be installed.
+                Superlinter supports it, but the version cannot be specified.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Trunk Code Quality
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Trunk Code Quality supports it, but the version cannot be specified.
               </dd>
             </div>
           </dl>
