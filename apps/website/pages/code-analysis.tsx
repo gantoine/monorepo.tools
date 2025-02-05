@@ -4,6 +4,7 @@ import {
   EffectiveTools,
   Challenges,
   ToolsSupportCallout,
+  CodeAnalysisTools,
 } from '@monorepo-tools/website/ui-code-analysis';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
@@ -44,6 +45,7 @@ export function Index() {
         <Challenges />
         <EffectiveTools />
         <ToolsSupportCallout />
+        <CodeAnalysisTools />
       </main>
 
       <Footer />
