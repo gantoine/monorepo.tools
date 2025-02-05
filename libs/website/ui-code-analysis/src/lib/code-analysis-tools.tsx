@@ -14,6 +14,13 @@ import {
   ArrowsUpDownIcon,
   CommandLineIcon,
   XCircleIcon,
+  EyeIcon,
+  Bars2Icon,
+  DocumentDuplicateIcon,
+  ExclamationTriangleIcon,
+  PuzzlePieceIcon,
+  CodeBracketSquareIcon,
+  CloudIcon,
 } from '@heroicons/react/24/outline';
 import { CodeAnalysisToolsLogos } from './code-analysis-tools-logos';
 
@@ -78,21 +85,21 @@ export function CodeAnalysisTools(): JSX.Element {
           <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
         </div>
 
-        {/*Local Computation Caching*/}
+        {/*Lint only what’s changed*/}
         <div
-          id="local-computation-caching"
+          id="lint-only-whats-changed"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <DocumentArrowDownIcon className="h-6 w-6" />
+              <EyeIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Local computation caching
+              Lint only what’s changed
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#local-computation-caching"
+                href="#lint-only-whats-changed"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -100,9 +107,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to store and replay file and process output of tasks.
-              On the same machine, you will never build or test the same thing
-              twice.
+              Lint, only the projects and files have changed in this commit.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -121,120 +126,96 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
+                  <Supported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel supports it.
+                Codacy Quality supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
+                  <Supported /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Tool supplies a local build cache natively. Gradle
-                Enterprise adds support for replication and management.
+                Megalinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lage
+                  <Supported /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage supports it.
+                Precommit supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lerna v6 has built-in local computation caching powered by the
-                Nx.
+                Qodana requires manual input of {" "}
+                <span className="py-0.5 px-2 bg-slate-200 dark:bg-slate-800 rounded-md">
+                  <code>
+                    --diff-start=&lt;GIT_START_HASH&gt; --diff-end=&lt;GIT_END_HASH&gt;
+                  </code>
+                </span>
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon supports it through tarballs and efficient file tree
-                diffing while unpacking.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
+                  <Supported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Like React, Nx does tree diffing when restoring the results from
-                its cache, which, on average, makes it faster than other tools (
-                <a href="https://github.com/vsavkin/large-monorepo">
-                  see this benchmark comparing Nx, Lage, and Turborepo
-                </a>
-                ).
+                Superlinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush supports it, leveraging the system tar command to restore
-                files more quickly.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Turborepo supports it.
+                Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Local task orchestration*/}
+        {/*Lint in parallel*/}
         <div
-          id="local-task-orchestration"
+          id="lint-in-parallel"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <ArrowsUpDownIcon className="h-6 w-6" />
+              <Bars2Icon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Local task orchestration
+              Lint in parallel
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#local-task-orchestration"
+                href="#lint-in-parallel"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -242,9 +223,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to run tasks in the correct order and in parallel. All
-              the listed tools can do it in about the same way, except Lerna,
-              which is more limited.
+              Execute linters in parallel for faster linting.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -262,638 +241,71 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
+                  <NotSupported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel supports it.
+              Codacy Quality doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
+                  <Supported /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Tool provides support for parallel tasks via
-                configuration, and task orchestration through its flexible
-                Groovy or Kotlin DSL.
+                Megalinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lage
+                  <Supported /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage supports it.
+                Precommit supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
+                  <NotSupported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna v6 leverages Nx to efficiently coordinate and parallelize
-                tasks.
+                Qodana doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon supports it.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
+                  <Supported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Nx supports it.
+                Superlinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush supports it. Commands can be modeled either as a simple
-                script or as separate "phases" such as build, test, etc.
-              </dd>
-            </div>{' '}
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Turborepo supports it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Distributed Computation Caching*/}
-        <div
-          id="distributed-computation-caching"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CloudArrowDownIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Distributed computation caching
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#distributed-computation-caching"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to share cache artifacts across different
-              environments. This means that your whole organisation, including
-              CI agents, will never build or test the same thing twice.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/distributed-computation-caching.svg"
-                alt="distributed computation caching schema"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Tool offers a remote distributed cache. Gradle
-                Enterprise adds support for replication and management.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lage
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna v6 can be connected to Nx Cloud to enable distributed
-                caching.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon supports it through{' '}
-                <a href="https://moonrepo.dev/moonbase">moonbase</a>.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Nx supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Pants supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush has built-in support for Azure and AWS storage, with a
-                plugin API allowing custom cache providers.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Turborepo supports it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Distributed Task Execution*/}
-        <div
-          id="distributed-task-execution"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <RectangleStackIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Distributed task execution
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#distributed-task-execution"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to distribute a command across many machines, while
-              largely preserving the dev ergonomics of running it on a single
-              machine.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/distributed-tasks-execution.svg"
-                alt="distributed tasks execution"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Bazel's implementation is the most sophisticated one and can
-                scale to repos with billions of lines of code. It's also
-                difficult to set up.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Gradle Build Tool
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Gradle Enterprise can distribute Test tasks.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Lage
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lage doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna v6 can be connected to Nx Cloud for enabling distributed
-                task execution.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                moon doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Nx's implementation isn't as sophisticated as Bazel's but it can
-                be turned on with a small configuration change.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Pant's implementation is similar to Bazel's and uses the same
-                Remote Execution API.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Rush provides this feature by optionally integrating with
-                Microsoft's BuildXL accelerator.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Turborepo doesn't support it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Transparent Remote Execution*/}
-        <div
-          id="transparent-remote-execution"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <ServerIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Transparent remote execution
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#transparent-remote-execution"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to execute any command on multiple machines while
-              developing locally.
-            </p>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Bazel
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                This is Bazel's biggest differentiator.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Gradle Build Tool
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Gradle Build Tool doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Lage
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lage doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Lerna
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                moon doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Nx doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Pant's implementation is similar to Bazel's and uses the same
-                Remote Execution API.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Rush doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Turborepo doesn't support it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Affected*/}
-        <div
-          id="detecting-affected-projects-packages"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <LightBulbIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Detecting affected projects/packages
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#detecting-affected-projects-packages"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Determine what might be affected by a change, to run only
-              build/test affected projects.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/dependency-graph.svg"
-                alt="dependency graph"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Bazel
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Bazel doesn't have built-in support, however third-party tools
-                such as{' '}
-                <a
-                  href="https://github.com/bazel-contrib/target-determinator?utm_source=monorepo.tools"
-                  rel="noreferrer"
-                  target="_blank"
-                  title="Check target-determinator"
-                  className="underline"
-                >
-                  target-determinator
-                </a>{' '}
-                provide this feature by using Bazel's query language.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Gradle Build Tool natively provides incremental building and
-                up-to-date detection.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lage
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lage supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Lerna supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                moon supports it through a combination of querying a VCS (git)
-                and inspecting the file system.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Nx supports it. Its implementation doesn't just look at what
-                files changed but also at the nature of the change.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Pants supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                The command line parameters for project selection can detect
-                which projects are impacted by a Git diff. Rush also provides a
-                PackageChangeAnalyzer API for automation scenarios.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Turborepo supports it.
+                Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
@@ -905,21 +317,21 @@ export function CodeAnalysisTools(): JSX.Element {
           <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
         </div>
 
-        {/*Workspace analysis*/}
+        {/*Standardize linter output*/}
         <div
-          id="workspace-analysis"
+          id="standardize-linter-output"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <PresentationChartLineIcon className="h-6 w-6" />
+              <DocumentDuplicateIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Workspace analysis
+              Standardize linter output
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#workspace-analysis"
+                href="#standardize-linter-output"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -927,8 +339,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              The ability to understand the project graph of the workspace
-              without extra configuration.
+              Different linters have different output formats. Standardized outputs keeps everything readable even when you run many tools.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -946,105 +357,71 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Bazel
+                  <Supported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Bazel allows developers to author BUILD files. Some companies
-                build tools that analyse workspace sources and generate the
-                BUILD files.
+                Codacy Quality supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Gradle Build Tool
+                  <ManualImplementation /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build Tool developers script build tasks in Groovy using
-                build.gradle, or Kotlin using build.gradle.kts.
+                Megalinter generates a mini report, linter level and file level results is starndardized, but individual issues reported isn’t. Also supports reporters.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lage
+                  <ManualImplementation /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lage analyses package.json files.
+                Precommit linter level and file level results are starndardized, but individual issues reported isn't.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Lerna analyses package.json files.
+                Qodana supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon analyses manifest files (package.json) of all{' '}
-                <a href="https://moonrepo.dev/docs#supported-languages">
-                  tier 2 languages
-                </a>{' '}
-                it supports. In the future, will support more languages with
-                WASM plugins.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Nx
+                  <ManualImplementation /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                By default, Nx analyses <code>package.json</code>, JavaScript,
-                and TypeScript files. It's pluggable and can be extended to
-                support other platforms (e.g, Go, Java, Rust).
+                Superlinter linter level and file level results are starndardized, but individual issues reported isn't.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                This is Pants's biggest differentiator. It uses static analysis
-                to automatically infer file-level dependencies for all the
-                languages and frameworks it supports.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Rush projects have the same package.json file and build scripts
-                as a single-repo project. Tooling/configuration is shared across
-                the monorepo by optionally creating "rig packages."
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Turborepo analyses package.json files.
+              Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
