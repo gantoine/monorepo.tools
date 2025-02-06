@@ -1,28 +1,19 @@
 import {
-  CheckCircleIcon,
-  CloudArrowDownIcon,
-  CodeBracketIcon,
-  CogIcon,
-  RectangleStackIcon,
-  DocumentArrowDownIcon,
-  ExclamationCircleIcon,
-  LightBulbIcon,
   LinkIcon,
-  PresentationChartLineIcon,
-  ServerIcon,
-  SignalIcon,
-  ArrowsUpDownIcon,
-  CommandLineIcon,
+  CheckCircleIcon,
   XCircleIcon,
   EyeIcon,
+  ExclamationCircleIcon,
+  ArrowLeftOnRectangleIcon,
   Bars2Icon,
-  DocumentDuplicateIcon,
-  ExclamationTriangleIcon,
-  PuzzlePieceIcon,
-  CodeBracketSquareIcon,
-  CloudIcon,
+  RectangleStackIcon,
+  QueueListIcon,
+  ClipboardDocumentListIcon,
+  ListBulletIcon,
+  Square3Stack3DIcon,
+  PauseIcon,
 } from '@heroicons/react/24/outline';
-import { CodeAnalysisToolsLogos } from './merge-queue-apps-logos';
+import { MergeQueueAppsLogos } from './merge-queue-apps-logos';
 
 const Supported = () => (
   <span
@@ -52,42 +43,42 @@ const ManualImplementation = () => (
   </span>
 );
 
-export function CodeAnalysisTools(): JSX.Element {
+export function MergeQueueApps(): JSX.Element {
   return (
     <div
-      data-test-id="monorepo-tools"
-      id="monorepo-tools"
+      data-test-id="merge-queues"
+      id="merge-queues"
       className="overflow-hidden bg-slate-50 py-16 dark:bg-slate-800 lg:py-24"
     >
       <div className="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="relative">
           <div className="group text-center text-4xl font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            # Monorepo tools
+            # Merge Queues
             <a
               aria-hidden="true"
               tabIndex={-1}
-              href="#monorepo-tools"
+              href="#merge-queues"
               className="flex inline-flex items-center text-gray-900 dark:text-white"
             >
               <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
             </a>
           </div>
           <p className="mx-auto mt-4 max-w-3xl text-center text-xl text-gray-700 dark:text-gray-300">
-            We chose code analysis tools that support most popular languages, can perform linting, formatting, and security checks, as well as manage tool installs for your repo. We believe these are the core features necessary for a good code analysis experience in monorepos.
+            We chose merge queues that support advanced features like dynamic parallel queues, pending failure depth, and PR prioritization, in an effort to highlight the importance of selecting the right tool based on workflow needs.
           </p>
         </div>
 
-        <CodeAnalysisToolsLogos />
+        <MergeQueueAppsLogos />
 
-        {/*FAST*/}
+        {/*RELIABLE*/}
         <div className="font-boldtext-gray-800 dark:text-gray-100tracking-tight mt-24 flex items-center text-2xl leading-loose sm:text-3xl sm:leading-relaxed lg:mt-32">
-          Fast
+          Reliable
           <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
         </div>
 
-        {/*Lint only what’s changed*/}
+        {/*Predictive testing*/}
         <div
-          id="lint-only-whats-changed"
+          id="predictive-testing"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
@@ -95,11 +86,11 @@ export function CodeAnalysisTools(): JSX.Element {
               <EyeIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Lint only what’s changed
+              Predictive testing
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#lint-only-whats-changed"
+                href="#predictive-testing"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -107,7 +98,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Lint, only the projects and files have changed in this commit.
+              Test each PR with all changes speculated to merge before it. This is the foundation of all merge queues.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -126,84 +117,277 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it.
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
+                  <Supported /> GitHub Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Megalinter supports it.
+                GitHub Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
+                  <Supported /> GitLab Merge Trains
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Precommit supports it.
+                GitLab Merge Trains supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
+                  <Supported /> Graphite Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Qodana requires manual input of {" "}
-                <span className="py-0.5 px-2 bg-slate-200 dark:bg-slate-800 rounded-md">
-                  <code>
-                    --diff-start=&lt;GIT_START_HASH&gt; --diff-end=&lt;GIT_END_HASH&gt;
-                  </code>
-                </span>
+                Graphite Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Superlinter supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Lint in parallel*/}
+        {/*Pending failure depth*/}
         <div
-          id="lint-in-parallel"
+          id="predictive-testing"
+          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
+        >
+          <div className="relative">
+            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
+              <ExclamationCircleIcon className="h-6 w-6" />
+            </div>
+            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
+              Pending failure depth
+              <a
+                aria-hidden="true"
+                tabIndex={-1}
+                href="#predictive-testing"
+                className="flex inline-flex items-center text-gray-900 dark:text-white"
+              >
+                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+              Where failed PRs will wait for some number of PRs behind it to fail before being kicked out of the queue. It can be effective in reducing impact of flaky tests.
+            </p>
+
+            <div className="mt-10" aria-hidden="true">
+              <img
+                loading="lazy"
+                className="relative mx-auto"
+                width={490}
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
+              />
+            </div>
+          </div>
+
+          {/* (alphabetical order) */}
+          <dl className="mt-12 space-y-6 md:mt-0">
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Aviator Merge Queue
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Aviator Merge Queue supports it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitHub Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitHub Merge Queues does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitLab Merge Trains
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitLab Merge Trains does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Graphite Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <ManualImplementation /> Mergify
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Mergify must be manually configured, as there are no integrations with tools like Bazel or Nx.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Trunk Merge
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Trunk Merge supports it.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/*SCALABLE*/}
+        <div className="font-boldtext-gray-800 dark:text-gray-100tracking-tight mt-24 flex items-center text-2xl leading-loose sm:text-3xl sm:leading-relaxed lg:mt-32">
+          Scalable
+          <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
+        </div>
+
+        {/*Optimistic merging*/}
+        <div
+          id="optimistic-merging"
+          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
+        >
+          <div className="relative">
+            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
+              <ArrowLeftOnRectangleIcon className="h-6 w-6" />
+            </div>
+            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
+              Optimistic merging
+              <a
+                aria-hidden="true"
+                tabIndex={-1}
+                href="#optimistic-merging"
+                className="flex inline-flex items-center text-gray-900 dark:text-white"
+              >
+                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+              If a PR has passed testing with the changes of PRs in front of it, it’s safe to merge this PR and all other PRs in front together.
+            </p>
+
+            <div className="mt-10" aria-hidden="true">
+              <img
+                loading="lazy"
+                className="relative mx-auto"
+                width={490}
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
+              />
+            </div>
+          </div>
+
+          {/* (alphabetical order) */}
+          <dl className="mt-12 space-y-6 md:mt-0">
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Aviator Merge Queue
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Aviator Merge Queue supports it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitHub Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitHub Merge Queues does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitLab Merge Trains
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitLab Merge Trains does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Graphite Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues supports it when applied to stacks.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Mergify
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Mergify does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Trunk Merge
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Trunk Merge supports it.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/*Concurrent testing*/}
+        <div
+          id="concurrent-testing"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
@@ -211,11 +395,11 @@ export function CodeAnalysisTools(): JSX.Element {
               <Bars2Icon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Lint in parallel
+              Concurrent testing
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#lint-in-parallel"
+                href="#concurrent-testing"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -223,7 +407,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Execute linters in parallel for faster linting.
+              Testing multiple PRs in the queue independently at once.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -231,107 +415,92 @@ export function CodeAnalysisTools(): JSX.Element {
                 loading="lazy"
                 className="relative mx-auto"
                 width={490}
-                src="/images/local-task-orchestration.svg"
-                alt="local task orchestration schema"
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
 
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Codacy Quality doesn't support it.
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
+                  <Supported /> GitHub Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Megalinter supports it.
+                GitHub Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
+                  <Supported /> GitLab Merge Trains
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Precommit supports it.
+                GitLab Merge Trains supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Qodana
+                  <Supported /> Graphite Merge Queues
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana doesn't support it.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Superlinter supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*UNDERSTANDABLE*/}
-        <div className="font-boldtext-gray-800 dark:text-gray-100tracking-tight mt-24 flex items-center text-2xl leading-loose sm:text-3xl sm:leading-relaxed lg:mt-32">
-          Understandable
-          <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
-        </div>
-
-        {/*Standardize linter output*/}
+        {/*Batching*/}
         <div
-          id="standardize-linter-output"
+          id="batching"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <DocumentDuplicateIcon className="h-6 w-6" />
+              <RectangleStackIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Standardize linter output
+              Batching
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#standardize-linter-output"
+                href="#batching"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -339,7 +508,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Different linters have different output formats. Standardized outputs keeps everything readable even when you run many tools.
+              Batch changes from multiple PRs into one merge branch to be tested together.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -347,101 +516,92 @@ export function CodeAnalysisTools(): JSX.Element {
                 loading="lazy"
                 className="relative mx-auto"
                 width={490}
-                src="/images/workspace-analysis.svg"
-                alt="workspace analysis"
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
 
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it.
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Megalinter
+                  <NotSupported /> GitHub Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Megalinter generates a mini report, linter level and file level results is starndardized, but individual issues reported isn’t. Also supports reporters.
+                GitHub Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Precommit
+                  <NotSupported /> GitLab Merge Trains
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Precommit linter level and file level results are starndardized, but individual issues reported isn't.
+                GitLab Merge Trains does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
+                  <Supported /> Graphite Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Qodana supports it.
+                Graphite Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Superlinter linter level and file level results are starndardized, but individual issues reported isn't.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-              Trunk Code Quality supports it.
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Browse new and existing issues*/}
+        {/*Dynamic Parallel Queues*/}
         <div
-          id="browse-new-and-existing-issues"
+          id="dynamic-parallel-queues"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <ExclamationTriangleIcon className="h-6 w-6" />
+              <QueueListIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Browse new and existing issues
+              Dynamic Parallel Queues
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#browse-new-and-existing-issues"
+                href="#dynamic-parallel-queues"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -449,119 +609,207 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Browse issues found in your repo and surface urgent problems and vulnerabilities.
+              Multiple queues where independently affected build targets from a monorepo can be tested in parallel.
             </p>
 
             <div className="mt-10" aria-hidden="true">
-              <iframe
+              <img
                 loading="lazy"
-                className="relative mx-auto max-w-full rounded-md"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/v87Y8NgAYLo"
-                title="Interactive dependency graph visualization with Nx"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                className="relative mx-auto"
+                width={490}
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
 
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it.
+                Aviator Merge Queue supports it with Nx.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Megalinter
+                  <NotSupported /> GitHub Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Gradle Build supports it via a Graphana integration.
+                GitHub Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Precommit
+                  <NotSupported /> GitLab Merge Trains
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Precommit doesn't support it.
+                GitLab Merge Trains does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
+                  <NotSupported /> Graphite Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Qodana supports it.
+                Graphite Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <ManualImplementation /> Mergify
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+                Mergify supports it, but it must be configured as there are no integration with tools like Bazel or Nx.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Superlinter doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*MANAGRABLE*/}
+        {/*Multi-stage testing*/}
+        <div
+          id="multi-stage-testing"
+          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
+        >
+          <div className="relative">
+            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
+              <ClipboardDocumentListIcon className="h-6 w-6" />
+            </div>
+            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
+              Multi-stage testing
+              <a
+                aria-hidden="true"
+                tabIndex={-1}
+                href="#multi-stage-testing"
+                className="flex inline-flex items-center text-gray-900 dark:text-white"
+              >
+                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+              Save CI cost by running smoke tests or a preliminary set of tests and failing fast.
+            </p>
+
+            <div className="mt-10" aria-hidden="true">
+              <img
+                loading="lazy"
+                className="relative mx-auto"
+                width={490}
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
+              />
+            </div>
+          </div>
+
+          {/* (alphabetical order) */}
+          <dl className="mt-12 space-y-6 md:mt-0">
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Aviator Merge Queue
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Aviator Merge Queue does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitHub Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitHub Merge Queues does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> GitLab Merge Trains
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitLab Merge Trains does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Graphite Merge Queues
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues does not support it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Mergify
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Mergify supports it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Trunk Merge
+                </p>
+              </dt>
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Trunk Merge does not support it.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/*MANAGEABLE*/}
         <div className="font-boldtext-gray-800 dark:text-gray-100tracking-tight mt-24 flex items-center text-2xl leading-loose sm:text-3xl sm:leading-relaxed lg:mt-32">
           Manageable
           <div className="ml-4 flex h-1 w-full flex-grow rounded bg-slate-100 dark:bg-slate-900" />
         </div>
 
-        {/*Multi-language quality and security tools*/}
+        {/*PR prioritization */}
         <div
-          id="multi-language-quality-and-security-tools"
+          id="pr-prioritization"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CodeBracketIcon className="h-6 w-6" />
+              <ListBulletIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Multi-language quality and security tools
+              PR prioritization 
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#multi-language-quality-and-security-tools"
+                href="#pr-prioritization"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -569,7 +817,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Supports linting, formatting, and security tools for most popular languages and frameworks.
+              Some PRs need to be tested first, and some need to be skipped before going to the front of the queue. This allows you to rush important PRs and hotfixes out the door.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -577,100 +825,92 @@ export function CodeAnalysisTools(): JSX.Element {
                 loading="lazy"
                 className="relative mx-auto"
                 width={490}
-                src="/images/source-code-sharing.svg"
-                alt="source code sharing"
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
+
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it.
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
+                  <Supported /> GitHub Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Megalinter supports it.
+                GitHub Merge Queues supports it, but only by skipping to the top of queue.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
+                  <NotSupported /> GitLab Merge Trains
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Precommit supports it.
+                GitLab Merge Trains does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
+                  <NotSupported /> Graphite Merge Queues
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Qodana supports it.
+                Graphite Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Superlinter supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Tooling install and management*/}
+        {/*Stacked PRs*/}
         <div
-          id="tooling-install-and-management"
+          id="stacked-prs"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CogIcon className="h-6 w-6" />
+              <Square3Stack3DIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Tooling install and management
+              Stacked PRs 
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#tooling-install-and-management"
+                href="#stacked-prs"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -678,7 +918,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Manage tool installs, versioning, and required dependencies or language runtimes. For example, sds/scss-lint requires ruby, linter tools should manage both scss-lint and ruby runtime.
+              Some PRs depend on each other to work and must be tested and merged as a unit. This lets you “stack” them for merging.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -686,100 +926,92 @@ export function CodeAnalysisTools(): JSX.Element {
                 loading="lazy"
                 className="relative mx-auto"
                 width={490}
-                src="/images/consistent-tooling.svg"
-                alt="consistent tooling schema"
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
+
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it, but the version cannot be specified.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Megalinter
+                  <NotSupported /> GitHub Merge Queues
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Megalinter supports it, but the version cannot be specified.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitHub Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Precommit
+                  <NotSupported /> GitLab Merge Trains
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Precommit is not hermetic, and you might run into runtime incompatibility issues.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitLab Merge Trains does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Qodana
+                  <Supported /> Graphite Merge Queues
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana supports it as containerized tools.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues supports it, though their merge queues are optimized for stacked workflows.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Sonarqube supports it, but the version cannot be specified.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Superlinter
+                  <NotSupported /> Trunk Merge
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Superlinter supports it, but the version cannot be specified.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it, but the version cannot be specified.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Trunk Merge does not support it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Supports extensions*/}
+        {/*Pausing*/}
         <div
-          id="supports-extensions"
+          id="pausing"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <PuzzlePieceIcon className="h-6 w-6" />
+              <PauseIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Supports extensions
+              Pausing
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#supports-extensions"
+                href="#pausing"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -787,7 +1019,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Can be extended with custom rules and plugins to meet your org’s unique quality standards and practices.
+              Allows the merge queue to be temporarily paused for increased control. Useful while incidents are handled and other special circumstances.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -795,411 +1027,72 @@ export function CodeAnalysisTools(): JSX.Element {
                 loading="lazy"
                 className="relative mx-auto"
                 width={490}
-                src="/images/code-generation.svg"
-                alt="code generation"
+                src="/images/local-computation-caching.svg"
+                alt="local computation caching schema"
               />
             </div>
           </div>
 
+          {/* (alphabetical order) */}
           <dl className="mt-12 space-y-6 md:mt-0">
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Codacy Quality
+                  <Supported /> Aviator Merge Queue
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Codacy Quality doesn't support it.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Aviator Merge Queue supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
+                  <NotSupported /> GitHub Merge Queues
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Megalinter supports it.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitHub Merge Queues does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation /> Precommit
+                  <NotSupported /> GitLab Merge Trains
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Precommit requires that you write your own hooks.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                GitLab Merge Trains does not support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
+                  <Supported /> Graphite Merge Queues
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana supports it.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Graphite Merge Queues supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
+                  <Supported /> Mergify
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Mergify supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Superlinter
+                  <Supported /> Trunk Merge
                 </p>
               </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Superlinter doesn't support it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Runs in CI*/}
-        <div
-          id="runs-in-ci"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CloudIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Runs in CI
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#runs-in-ci"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Run linters and report results in CI on PRs and commits.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/project-constrains-and-visibility.svg"
-                alt="Runs in CI"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Megalinter supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Precommit supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Sonarqube supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Superlinter supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Runs locally*/}
-        <div
-          id="runs-locally"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CommandLineIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Runs locally
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#runs-locally"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Run locally as a CLI tool as you code and before you commit.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/project-constrains-and-visibility.svg"
-                alt="Runs in CI"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Codacy Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Codacy Quality supports it in containerized tools, and some locally installed tools.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Megalinter supports it but requires Docker to run all tools.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Precommit supports it.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana supports running CLI runs tools from containerized images.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Sonarqube supports it though SonarScan.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Superlinter supports it but requires Docker to run all tools.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it only in VSCode.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        {/*Runs in your IDE*/}
-        <div
-          id="runs-in-your-ide"
-          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
-        >
-          <div className="relative">
-            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CodeBracketSquareIcon className="h-6 w-6" />
-            </div>
-            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Runs in your IDE
-              <a
-                aria-hidden="true"
-                tabIndex={-1}
-                href="#runs-in-your-ide"
-                className="flex inline-flex items-center text-gray-900 dark:text-white"
-              >
-                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
-              </a>
-            </div>
-
-            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Realtime feedback on your changes as you code right in your editor.
-            </p>
-
-            <div className="mt-10" aria-hidden="true">
-              <img
-                loading="lazy"
-                className="relative mx-auto"
-                width={490}
-                src="/images/project-constrains-and-visibility.svg"
-                alt="Runs in CI"
-              />
-            </div>
-          </div>
-
-          <dl className="mt-12 space-y-6 md:mt-0">
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <NotSupported /> Codacy Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Codacy Quality only looks at known issues but cannot lint.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Megalinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Megalinter supports it as a dev container.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Precommit
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Precommit supports it in VSCode.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Qodana
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Qodana supports it in Jetbrains IDE.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Sonarqube
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Sonarqube supports it in multiple popular IDEs.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Superlinter
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Superlinter supports it as a dev container.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported /> Trunk Code Quality
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Trunk Code Quality supports it in VSCode.
+              <dd className="mt-4 text-gray-600 dark:text-gray-400">
+                Trunk Merge supports it.
               </dd>
             </div>
           </dl>

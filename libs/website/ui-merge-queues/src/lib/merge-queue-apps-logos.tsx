@@ -28,7 +28,7 @@ const tools2: { name: string; link: string }[] = [
   },
 ];
 
-export function CodeAnalysisToolsLogos(): JSX.Element {
+export function MergeQueueAppsLogos(): JSX.Element {
   return (
     <>
       <div className="mt-8 grid grid-cols-3 gap-3 pt-12 text-lg font-semibold lg:mt-16 lg:pt-16 lg:text-2xl">

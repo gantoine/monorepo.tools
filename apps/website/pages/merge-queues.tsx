@@ -4,7 +4,7 @@ import {
   KeyFeatures,
   Challenges,
   KeyFeaturesCallout,
-  CodeAnalysisTools,
+  MergeQueueApps,
 } from '@monorepo-tools/website/ui-merge-queues';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
@@ -45,7 +45,7 @@ export function Index() {
         <Challenges />
         <KeyFeatures />
         <KeyFeaturesCallout />
-        <CodeAnalysisTools />
+        <MergeQueueApps />
       </main>
 
       <Footer />
