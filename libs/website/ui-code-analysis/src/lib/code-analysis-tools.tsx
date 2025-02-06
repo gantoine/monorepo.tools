@@ -1,17 +1,9 @@
 import {
   CheckCircleIcon,
-  CloudArrowDownIcon,
   CodeBracketIcon,
   CogIcon,
-  RectangleStackIcon,
-  DocumentArrowDownIcon,
   ExclamationCircleIcon,
-  LightBulbIcon,
   LinkIcon,
-  PresentationChartLineIcon,
-  ServerIcon,
-  SignalIcon,
-  ArrowsUpDownIcon,
   CommandLineIcon,
   XCircleIcon,
   EyeIcon,
@@ -62,7 +54,7 @@ export function CodeAnalysisTools(): JSX.Element {
       <div className="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="relative">
           <div className="group text-center text-4xl font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            # Monorepo tools
+            # Code Analysis tools
             <a
               aria-hidden="true"
               tabIndex={-1}
