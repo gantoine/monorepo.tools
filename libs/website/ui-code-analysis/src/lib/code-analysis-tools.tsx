@@ -245,7 +245,7 @@ export function CodeAnalysisTools(): JSX.Element {
                 </p>
               </dt>
               <dd className="mt-4 text-gray-600 dark:text-gray-400">
-              Codacy Quality doesn't support it.
+                Codacy Quality doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
@@ -765,21 +765,21 @@ export function CodeAnalysisTools(): JSX.Element {
           </dl>
         </div>
 
-        {/*Code Generation*/}
+        {/*Supports extensions*/}
         <div
-          id="code-generation"
+          id="supports-extensions"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <CogIcon className="h-6 w-6" />
+              <PuzzlePieceIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Code generation
+              Supports extensions
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#code-generation"
+                href="#supports-extensions"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -787,7 +787,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Native support for generating code
+              Can be extended with custom rules and plugins to meet your org’s unique quality standards and practices.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -805,133 +805,91 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Bazel
+                  <NotSupported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                External generators can be used.
+                Codacy Quality doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Gradle Build Tool
+                  <Supported /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                External generators can be used.
+                Megalinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Lage
+                  <ManualImplementation /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                External generators can be used.
+                Precommit requires that you write your own hooks.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                External generators can be used.
+                Qodana supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  moon
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                moon provides a file system/template based code generation
-                layer.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Nx
+                  <NotSupported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Nx comes with powerful code generation capabilities. It uses a
-                virtual file system and provides editor integration. Nx plugins
-                provided generators for popular frameworks. Other generators can
-                be used as well.
+                Superlinter doesn't support it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Pants
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Pants ships with plugins for popular code generation frameworks,
-                including Protobuf/gRPC, Thrift, Scrooge, Avro, and SOAP. There
-                is Plugin API support for easily adding new code generators. It
-                supports generating code in multiple languages from a single
-                codegen source. It is able to infer dependencies by static
-                analysis of codegen sources, and correctly invalidate generated
-                code when those sources change.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Rush
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                The Rush maintainers suggest to maintain project templates as
-                ordinary projects in the monorepo, to ensure they compile
-                without errors. A project scaffolding command is available via a
-                community plugin.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Turborepo
-                </p>
-              </dt>
-              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                External generators can be used.
+                Trunk Code Quality supports it.
               </dd>
             </div>
           </dl>
         </div>
 
-        {/*Explicit Project Constrains*/}
+        {/*Runs in CI*/}
         <div
-          id="explicit-project-constrains"
+          id="runs-in-ci"
           className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
         >
           <div className="relative">
             <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
-              <SignalIcon className="h-6 w-6" />
+              <CloudIcon className="h-6 w-6" />
             </div>
             <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
-              Project constraints and visibility
+              Runs in CI
               <a
                 aria-hidden="true"
                 tabIndex={-1}
-                href="#explicit-project-constrains"
+                href="#runs-in-ci"
                 className="flex inline-flex items-center text-gray-900 dark:text-white"
               >
                 <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
@@ -939,12 +897,7 @@ export function CodeAnalysisTools(): JSX.Element {
             </div>
 
             <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
-              Supports definition of rules to constrain dependency relationships
-              within the repo. For instance, developers can mark some projects
-              as private to their team so no one else can depend on them.
-              Developers can also mark projects based on the technology used
-              (e.g., React or Nest.js) and make sure that backend projects don't
-              import frontend ones.
+              Run linters and report results in CI on PRs and commits.
             </p>
 
             <div className="mt-10" aria-hidden="true">
@@ -953,7 +906,7 @@ export function CodeAnalysisTools(): JSX.Element {
                 className="relative mx-auto"
                 width={490}
                 src="/images/project-constrains-and-visibility.svg"
-                alt="explicit project constrains"
+                alt="Runs in CI"
               />
             </div>
           </div>
@@ -962,115 +915,291 @@ export function CodeAnalysisTools(): JSX.Element {
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Bazel
+                  <Supported /> Codacy Quality
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Bazel supports visibility rules which help you separate what is
-                private from what is public, what can be shared, etc.
+                Codacy Quality supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Gradle Build Tool
+                  <Supported /> Megalinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                While not supported natively, Gradle Build Tool's rich plugin
-                possibilities allow rules like these to be developed.
+                Megalinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Lage
+                  <Supported /> Precommit
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                A linter with a set of custom rules and extra configuration can
-                be used to ensure that some constraints hold.
+                Precommit supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Lerna
+                  <Supported /> Qodana
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                A linter with a set of custom rules and extra configuration can
-                be used to ensure that some constraints hold.
+                Qodana supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  moon
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                moon has built-in support for project boundaries and
-                constraints. No external tools or commands are necessary, simply
-                tag and annotate all projects in the workspace.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Nx
-                </p>
-              </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-400">
-                Developers can annotate projects in any way they seem fit,
-                establish invariants, and Nx will make sure they hold. It allows
-                developers to annotate what is private and what is not, what is
-                experimental and what is stable, etc. Nx also allows you to
-                define public API for each package, so other developers aren't
-                able to deep import into them.
-              </dd>
-            </div>
-            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
-              <dt>
-                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Pants
+                  <Supported /> Sonarqube
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                While not yet supported natively, a custom plugin could be
-                written to enforce such rules.
+                Sonarqube supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <Supported />
-                  Rush
+                  <Supported /> Superlinter
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                Rush can optionally require approvals when introducing new NPM
-                dependencies (internal or external), based on project type. It
-                also supports version policies for NPM publishing.
+                Superlinter supports it.
               </dd>
             </div>
             <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
               <dt>
                 <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
-                  <ManualImplementation />
-                  Turborepo
+                  <Supported /> Trunk Code Quality
                 </p>
               </dt>
               <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
-                A linter with a set of custom rules and extra configuration can
-                be used to ensure that some constraints hold.
+                Trunk Code Quality supports it.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/*Runs locally*/}
+        <div
+          id="runs-locally"
+          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
+        >
+          <div className="relative">
+            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
+              <CommandLineIcon className="h-6 w-6" />
+            </div>
+            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
+              Runs locally
+              <a
+                aria-hidden="true"
+                tabIndex={-1}
+                href="#runs-locally"
+                className="flex inline-flex items-center text-gray-900 dark:text-white"
+              >
+                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+              Run locally as a CLI tool as you code and before you commit.
+            </p>
+
+            <div className="mt-10" aria-hidden="true">
+              <img
+                loading="lazy"
+                className="relative mx-auto"
+                width={490}
+                src="/images/project-constrains-and-visibility.svg"
+                alt="Runs in CI"
+              />
+            </div>
+          </div>
+
+          <dl className="mt-12 space-y-6 md:mt-0">
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Codacy Quality
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Codacy Quality supports it in containerized tools, and some locally installed tools.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Megalinter
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Megalinter supports it but requires Docker to run all tools.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Precommit
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Precommit supports it.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Qodana
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Qodana supports running CLI runs tools from containerized images.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Sonarqube
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Sonarqube supports it though SonarScan.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Superlinter
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Superlinter supports it but requires Docker to run all tools.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Trunk Code Quality
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Trunk Code Quality supports it only in VSCode.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/*Runs in your IDE*/}
+        <div
+          id="runs-in-your-ide"
+          className="relative mt-16 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
+        >
+          <div className="relative">
+            <div className="absolute flex h-10 w-10 items-center justify-center rounded-md rounded-md bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
+              <CodeBracketSquareIcon className="h-6 w-6" />
+            </div>
+            <div className="group ml-16 text-xl font-medium text-gray-800 dark:text-gray-200 sm:text-2xl sm:leading-relaxed">
+              Runs in your IDE
+              <a
+                aria-hidden="true"
+                tabIndex={-1}
+                href="#runs-in-your-ide"
+                className="flex inline-flex items-center text-gray-900 dark:text-white"
+              >
+                <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+              Realtime feedback on your changes as you code right in your editor.
+            </p>
+
+            <div className="mt-10" aria-hidden="true">
+              <img
+                loading="lazy"
+                className="relative mx-auto"
+                width={490}
+                src="/images/project-constrains-and-visibility.svg"
+                alt="Runs in CI"
+              />
+            </div>
+          </div>
+
+          <dl className="mt-12 space-y-6 md:mt-0">
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <NotSupported /> Codacy Quality
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Codacy Quality only looks at known issues but cannot lint.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Megalinter
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Megalinter supports it as a dev container.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Precommit
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Precommit supports it in VSCode.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Qodana
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Qodana supports it in Jetbrains IDE.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Sonarqube
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Sonarqube supports it in multiple popular IDEs.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Superlinter
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Superlinter supports it as a dev container.
+              </dd>
+            </div>
+            <div className="rounded-md border border-slate-200 bg-slate-100 p-4 dark:border-black dark:bg-slate-900">
+              <dt>
+                <p className="inline-flex items-center justify-center rounded-md bg-slate-50 px-3 py-2 text-sm uppercase tracking-widest text-gray-700 dark:bg-slate-800 dark:text-gray-300">
+                  <Supported /> Trunk Code Quality
+                </p>
+              </dt>
+              <dd className="mt-4 text-base text-gray-600 dark:text-gray-400">
+                Trunk Code Quality supports it in VSCode.
               </dd>
             </div>
           </dl>
