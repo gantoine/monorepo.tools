@@ -22,7 +22,7 @@ import {
   CodeBracketSquareIcon,
   CloudIcon,
 } from '@heroicons/react/24/outline';
-import { CodeAnalysisToolsLogos } from './code-analysis-tools-logos';
+import { CodeAnalysisToolsLogos } from './merge-queue-apps-logos';
 
 const Supported = () => (
   <span
