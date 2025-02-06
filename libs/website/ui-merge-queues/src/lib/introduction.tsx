@@ -3,7 +3,7 @@ import { LinkIcon } from '@heroicons/react/24/outline';
 export function Introduction(): JSX.Element {
   return (
     <div
-      data-test-id="understanding-monorepos"
+      data-test-id="merge-queues-for-monorepos"
       className="bg-slate-50 dark:bg-slate-800"
     >
       {/* Header */}
@@ -24,21 +24,21 @@ export function Introduction(): JSX.Element {
           <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
             <div>
               <h1
-                id="understanding-monorepos"
+                id="merge-queues-for-monorepos"
                 className="group text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
               >
-                Code Analysis for Monorepos{' '}
+                Merge Queues for Monorepos{' '}
                 <a
                   aria-hidden="true"
                   tabIndex={-1}
-                  href="#understanding-monorepos"
+                  href="#merge-queues-for-monorepos"
                   className="flex inline-flex items-center text-gray-900 dark:text-white"
                 >
                   <LinkIcon className="ml-2 h-6 w-6 opacity-0 group-hover:opacity-100" />
                 </a>
               </h1>
               <p className="mt-6 max-w-3xl text-xl text-gray-700 dark:text-gray-300">
-                One of the greatest advantages of monorepos is to create strong consistency between projects and as a result, better opportunities for collaboration and mobility for engineers. This can mean enforcing best practices and formatting with linters and formatters, shifting security left by checking configs and dependencies, and even writing custom rules to enforce org-specific rules.
+                Merge queues help you merge faster and safer into busy repos by automating merges and preventing incompatible changes. They work by entering each pull request into a queue and testing each pull request with changes of other PRs in the queue to find incompatible changes.
               </p>
             </div>
             <svg
@@ -82,13 +82,13 @@ export function Introduction(): JSX.Element {
                 Challenges
               </h2>
               <p className="mt-4 text-base text-gray-700 dark:text-gray-300">
-                Unique challenges for efficient code analysis and linting
+                Busy monorepos require merge queues to manage logical conflicts and ensure smoother PR merges amidst frequent updates.
               </p>
             </div>
             <div className="rounded-bl-2xl rounded-br-2xl bg-slate-200 p-6 md:px-8 dark:bg-slate-900">
               <a
-                href="#what-makes-code-analysis-challenging-for-monorepos"
-                title="What makes code analysis challenging for monorepos"
+                href="#what-makes-merging-challenging-for-monorepos"
+                title="What makes merging challenging for monorepos"
                 className="text-sm font-medium uppercase text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
               >
                 Challenges<span aria-hidden="true"> &rarr;</span>
@@ -98,26 +98,26 @@ export function Introduction(): JSX.Element {
           <div className="flex flex-col rounded-2xl bg-slate-100 shadow-xl dark:bg-slate-700">
             <div className="relative flex-1 px-6 pb-8 pt-16 md:px-8">
               <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                Effective tools
+                Key Features
               </h2>
               <p className="mt-4 text-base text-gray-700 dark:text-gray-300">
-                Streamline development by enforcing linting, formatting, and security checks
+                Tailored to your monorepo's size and workflow to ensure efficient and stable development.
               </p>
             </div>
             <div className="rounded-bl-2xl rounded-br-2xl bg-slate-200 p-6 md:px-8 dark:bg-slate-900">
               <a
-                href="#what-code-analysis-should-provide"
-                title="What code analysis should provide"
+                href="#what-merge-queues-should-provide"
+                title="What merge queues should provide"
                 className="text-sm font-medium uppercase text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
               >
-                Effective Tools<span aria-hidden="true"> &rarr;</span>
+                Key Features<span aria-hidden="true"> &rarr;</span>
               </a>
             </div>
           </div>
           <div className="flex flex-col rounded-2xl bg-slate-100 shadow-xl dark:bg-slate-700">
             <div className="relative flex-1 px-6 pb-8 pt-16 md:px-8">
               <h2 className="text-xl font-medium text-gray-800 dark:text-gray-200">
-                Code Analysis Tools
+                Merge Queues
               </h2>
               <p className="mt-4 text-base text-gray-700 dark:text-gray-300">
                 Focus on essential features for effective monorepo development
@@ -125,11 +125,11 @@ export function Introduction(): JSX.Element {
             </div>
             <div className="rounded-bl-2xl rounded-br-2xl bg-slate-200 p-6 md:px-8 dark:bg-slate-900">
               <a
-                href="#code-analysis-tools"
-                title="Code Analysis Tools"
+                href="#merge-queues"
+                title="Merge Queues"
                 className="text-sm font-medium uppercase text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
               >
-                Code Analysis Tools<span aria-hidden="true"> &rarr;</span>
+                Merge Queues<span aria-hidden="true"> &rarr;</span>
               </a>
             </div>
           </div>

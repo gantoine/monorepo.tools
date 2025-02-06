@@ -25,7 +25,8 @@
       "@monorepo-tools/website/ui-home": ["libs/website/ui-home/src/index.ts"],
       "@monorepo-tools/website/ui-typescript": [
         "libs/website/ui-typescript/src/index.ts"
-      ]
+      ],
+      "@monorepo-tools/website/ui-merge-queues": ["libs/website/ui-merge-queues/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

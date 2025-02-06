@@ -1,4 +1,4 @@
-export function ToolsSupportCallout(): JSX.Element {
+export function KeyFeaturesCallout(): JSX.Element {
   return (
     <article className="bg-slate-50 dark:bg-slate-800">
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
@@ -10,7 +10,7 @@ export function ToolsSupportCallout(): JSX.Element {
               </span>
             </h1>
             <p className="mt-4 text-xl leading-6 text-gray-700 dark:text-gray-300">
-              Features matter! You want code analysis tools that support the languages and tools you use and can manage tool versions and configs to keep your repo maintainable. Some other features, however, depend on your needs. If you have a large monorepo with millions, you need tools that can lint only what’s changed in each commit to keep linting fast. If you use a specific IDE, you might prefer tools that integrate best with your IDE. You might prefer to not choose tools with many config options and opt for more opinionated solutions.
+            Features matter! Some features can be show stoppers, like parallel queue support for your monorepo build system or stacked PRs if that’s how you choose to merge. Some other features entirely depend on your repo’s size and velocity, like the need for batching and PR prioritization.
             </p>
             <p className="mt-4 text-xl leading-6 text-gray-700 dark:text-gray-300">
               It’s important to pick the right tools for you and your needs, not just pick the tools with the most features.
